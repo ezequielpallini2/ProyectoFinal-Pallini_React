@@ -18,9 +18,10 @@ const Carrito = () => {
             carrito.map((prod) => (
                 <div key={prod.id}>
                     <br />
-                    <h3>{prod.titulo}</h3>
-                    <p>Precio unit: ${prod.precio}</p>
-                    <p>Precio total: ${prod.precio * prod.cantidad}</p>
+                    <h3>{prod.description}</h3>
+                    <img src={"../../" + prod.imagen} className="card-img-top" alt={prod.description}/>
+                    <p>Precio unit: ${prod.price}</p>
+                    <p>Precio total: ${prod.price * prod.cantidad}</p>
                     <p>Cant: {prod.cantidad}</p>
                     <br />
                 </div>
@@ -30,7 +31,7 @@ const Carrito = () => {
         {  
             carrito.length > 0 ?
             <>
-                <h2>Precio total: ${precioTotal()}</h2>
+ 
                 <button onClick={handleVaciar}>Vaciar</button>
                 <Link to="/checkout">Finalizar compra</Link>
             </> :

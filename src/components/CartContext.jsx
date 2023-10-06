@@ -9,16 +9,16 @@ export const CartProvider = ({children}) => {
 
     const [carrito, setCarrito] = useState(carritoInicial);
 
-    const agregarAlCarrito = (evento, cantidad) => {
-        const eventoAgregado = { ...evento, cantidad };
+    const agregarAlCarrito = (item, cantidad) => {
+        const itemAgregado = { ...item, cantidad };
 
         const nuevoCarrito = [...carrito];
-        const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === eventoAgregado.id);
+        const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
 
         if (estaEnElCarrito) {
             estaEnElCarrito.cantidad += cantidad;
         } else {
-            nuevoCarrito.push(eventoAgregado);
+            nuevoCarrito.push(itemAgregado);
         }
         setCarrito(nuevoCarrito);
     }

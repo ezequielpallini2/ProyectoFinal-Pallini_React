@@ -21,7 +21,7 @@ export const ItemDetail = ({ evento }) => {
       <div className="container" style={{width: 18 + 'em'}}>
       <img src={"../../" + evento.imagen} className="card-img-top" alt={evento.description}/>
       <div className="card-body">
-          <h5 className="card-title">Primavera 2023</h5>
+          <h5 className="card-title">Verano 2024</h5>
           <p className="card-text">{evento.description}</p>
           <p className="card-text">Categoría: {evento.categoria}</p>
           <p className="card-text">${evento.price}</p>
@@ -35,7 +35,7 @@ export const ItemDetail = ({ evento }) => {
           </div>
           <p className="card-text">¡Quedan solo {evento.stock} entradas! </p>
           
-          <a href="checkout.html" className="btn btn-primary" id="{evento.id}">Comprar</a>
+          <a className="card-text" >¡Para comprar haz click en el carrito en la esquina superior derecha de la pantalla!</a>
       </div>
 </div>
     )
