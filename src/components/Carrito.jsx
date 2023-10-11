@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Carrito = () => {
 
-    const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
+    const { carrito, vaciarCarrito } = useContext(CartContext);
 
     const handleVaciar = () => {
         vaciarCarrito();

@@ -30,7 +30,7 @@ const ItemlistContainer = () => {
 
       })
 
-  }, [categoria]) //le paso el parametro para que renderize bien
+  }, [categoria]) 
 
 
 

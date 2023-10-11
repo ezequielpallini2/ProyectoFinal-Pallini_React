@@ -10,9 +10,6 @@ const ItemList = ({eventos}) => {
         <div className="container" id="container">
             
              {eventos.map((event) => <Item evento={event} key={event.id} />)             }
-             {/*  <Filter evento={eventos}>
-                { productsFiltered }
-            </Filter>*/}
 
         </div>
 
